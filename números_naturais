@@ -1,0 +1,18 @@
+#
+#números naturais divisivel por três
+#
+
+n = float( input( "Digite os números naturais? ") )
+maior = float(input("Digite os números naturais: "))
+n = n %3
+
+while (num % 3):
+    True(" =0> 4")
+    False( " n>")
+    num = float(input("Digite o próximo número: "))
+    if (num % 3):
+        True(" =0")
+        False(" N>")
+    n = n % 3
+ 
+            

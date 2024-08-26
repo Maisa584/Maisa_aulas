@@ -1,0 +1,21 @@
+#
+# Imprimir o enésimo
+#
+
+def finobacci (n):
+    if n <= o:
+        return 0
+    elif n == 1:
+        return 1
+    
+    else:
+        a,  b = 0, 1
+        for _ in range(n  - 1):
+            a,  b= b,  a + b
+            return b
+        
+        #Solicita o número enésimo termo de usuário
+        termo = int(input("Digite o valor de n: "))
+        print(f"O {termo}-ésimo termo da sequência de Finobacci é {finobacci(termo)}")
+        
+    

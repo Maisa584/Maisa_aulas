@@ -1,0 +1,31 @@
+# Programa para localizar número menor
+
+#
+# Comando WHILE
+#
+
+#solicitar usuario números de entrada
+n = float( input("Quantos números você vai inserir? digite uma sequência de números separado por ponto: "))
+
+
+#inscrição de variaveis 
+menor_numero = None
+contador = 0
+
+# Solicitar números e encontrar o menor
+while contador < n:
+    entrada = float( input("Digite os números: "))
+    contador += 1
+
+
+    if (menor_numero is None) or (entrada < menor_numero):
+        menor_numero = entrada 
+
+
+
+#imprimir o menor número
+
+print("O menor número é:" , menor_numero)
+
+#Se o menor número é none, define como primeiro número 
+      

@@ -1,0 +1,39 @@
+# 
+# Tragetória rápida e econômica
+#
+
+ #Função para calcular o tempo total e o custo total de uma rota
+def calcular_tempo_e_custo(rota):
+    tempo_total = 0
+    custo_total = 0
+    for trecho in rota:
+        comprimento, velocidade = trecho
+        tempo = comprimento / velocidade
+        tempo_total += tempo
+        custo_total += comprimento  # Custo proporcional ao comprimento
+    return tempo_total, custo_total
+
+# Rotas definidas como uma lista de tuplas (comprimento, velocidade)
+rota_1 = [(1.2, 35), (0.7, 50), (0.6, 40), (2.4, 15)]
+rota_2 = [(0.6, 45), (1.1, 12), (0.9, 26), (0.4, 32), (15, 21)]
+rota_3 = [(0.4, 15), (1.3, 20), (0.7, 34), (1.8, 35), (0.5, 29)]
+
+# Calcular o tempo e o custo de cada rota
+tempo_1, custo_1 = calcular_tempo_e_custo(rota_1)
+tempo_2, custo_2 = calcular_tempo_e_custo(rota_2)
+tempo_3, custo_3 = calcular_tempo_e_custo(rota_3)
+
+# Determinar as rotas mais rápidas e mais econômicas
+tempos = [tempo_1, tempo_2, tempo_3]
+custos = [custo_1, custo_2, custo_3]
+
+rota_mais_rapida = tempos.index(min(tempos)) + 1
+rota_mais_economica = custos.index(min(custos)) + 1
+
+# Mostrar os resultados
+print(f"Tempo da Rota 1: {tempo_1:.2f} horas, Custo: {custo_1:.2f} km")
+print(f"Tempo da Rota 2: {tempo_2:.2f} horas, Custo: {custo_2:.2f} km")
+print(f"Tempo da Rota 3: {tempo_3:.2f} horas, Custo: {custo_3:.2f} km")
+
+print(f"\nA rota mais rápida é a Rota {rota_mais_rapida}.")
+print(f"A rota mais econômica é a Rota {rota_mais_economica}.")
